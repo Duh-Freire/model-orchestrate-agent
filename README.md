@@ -1,8 +1,10 @@
 # Model Orchestrate Agent — a Claude Code skill for model routing
 
-**Pick the cheapest model and effort that still gets the coding task done.**
+**Model Orchestrate Agent** is a smart skill that analyzes every coding task before it runs. It automatically recommends the cheapest AI model and the ideal effort level to get the job done.
 
-`model-orchestrate-agent` is an [Agent Skill](https://docs.claude.com/en/docs/claude-code/skills) for Claude Code (and other AI coding agents) that classifies every new coding task, recommends a model tier and reasoning effort, and — once you approve — applies the choice automatically by spawning a subagent or a new session on the right model. It saves tokens on easy work and escalates to frontier models only when the task really needs it.
+Sometimes we use a cannon to shoot a sparrow, or hire a crane to carry a shoebox. The bill at the end of the month feels the weight.
+
+Under the hood, `model-orchestrate-agent` is an [Agent Skill](https://docs.claude.com/en/docs/claude-code/skills) for Claude Code (and other AI coding agents) that classifies every new coding task, recommends a model tier and reasoning effort, and — once you approve — applies the choice automatically by spawning a subagent or a new session on the right model. It saves tokens on easy work and escalates to frontier models only when the task really needs it.
 
 [![skills.sh](https://skills.sh/b/duphl-wq/model-orchestrate-agent)](https://skills.sh/duphl-wq/model-orchestrate-agent)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE.txt)
