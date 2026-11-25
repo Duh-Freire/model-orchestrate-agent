@@ -42,26 +42,26 @@ Bias the choice per project with `optimize_for`: `cost`, `balanced` (default) or
 Personal (available in every project):
 
 ```bash
-git clone https://github.com/duphl-wq/claude-model-orchestrate-agent.git ~/.claude/skills/model-orchestrate-agent
+git clone https://github.com/duphl-wq/model-orchestrate-agent.git ~/.claude/skills/model-orchestrate-agent
 ```
 
 Project-only (shared with your team through the repo):
 
 ```bash
-git clone https://github.com/duphl-wq/claude-model-orchestrate-agent.git .claude/skills/model-orchestrate-agent
+git clone https://github.com/duphl-wq/model-orchestrate-agent.git .claude/skills/model-orchestrate-agent
 ```
 
 On Windows (PowerShell):
 
 ```powershell
-git clone https://github.com/duphl-wq/claude-model-orchestrate-agent.git "$env:USERPROFILE\.claude\skills\model-orchestrate-agent"
+git clone https://github.com/duphl-wq/model-orchestrate-agent.git "$env:USERPROFILE\.claude\skills\model-orchestrate-agent"
 ```
 
 Restart Claude Code; the skill shows up as `/model-orchestrate-agent`.
 
 ### Claude.ai / Claude desktop
 
-Download `model-orchestrate-agent.skill` from the [latest release](https://github.com/duphl-wq/claude-model-orchestrate-agent/releases/latest) and upload it under **Settings → Capabilities → Skills**.
+Download `model-orchestrate-agent.skill` from the [latest release](https://github.com/duphl-wq/model-orchestrate-agent/releases/latest) and upload it under **Settings → Capabilities → Skills**.
 
 ### Other agents (Codex, Cursor, Copilot, OpenCode)
 
