@@ -13,11 +13,19 @@ description: >-
 license: MIT
 metadata:
   author: duphl-wq
-  version: "0.7.0"
+  version: "0.7.1"
   tags: routing orchestration model effort cost tokens subagents
 ---
 
 # Model orchestrate agent
+
+> Analyzes every coding task before it runs and recommends the cheapest AI model
+> and the ideal effort level to get it done. Sometimes we use a cannon to shoot a
+> sparrow, or hire a crane to carry a shoebox — the bill at the end of the month
+> feels the weight.
+>
+> **Example:** a local bug while the session runs on Opus →
+> `Tier M · Sonnet · effort medium · single-worker` · "Apply now as a subagent? Yes / keep current"
 
 Recommend the lowest tier that still delivers, in the current app's models; the user validates, then the switch is automatic.
 
