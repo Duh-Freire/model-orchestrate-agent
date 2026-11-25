@@ -1,0 +1,126 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://localhost/model-orchestrate-agent/plan.schema.json",
+  "title": "ModelOrchestrateAgentPlan",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "tier",
+    "effort",
+    "mode",
+    "optimize_for",
+    "why",
+    "adapter",
+    "escalation"
+  ],
+  "properties": {
+    "task": {
+      "type": "string",
+      "description": "Original user task summary"
+    },
+    "tier": {
+      "type": "string",
+      "enum": ["S", "M", "L", "XL"]
+    },
+    "effort": {
+      "type": "string",
+      "enum": ["low", "medium", "high", "max"]
+    },
+    "mode": {
+      "type": "string",
+      "enum": ["solo", "single-worker", "fan-out"]
+    },
+    "optimize_for": {
+      "type": "string",
+      "enum": ["cost", "balanced", "quality"]
+    },
+    "why": {
+      "type": "string",
+      "minLength": 1
+    },
+    "adapter": {
+      "type": "string",
+      "enum": [
+        "claude-code",
+        "claude-ai",
+        "github-copilot",
+        "codex",
+        "cursor",
+        "opencode",
+        "generic"
+      ]
+    },
+    "escalation": {
+      "type": "string",
+      "description": "One-line escalation rule"
+    },
+    "workers": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["role", "goal"],
+        "properties": {
+          "role": { "type": "string" },
+          "goal": { "type": "string" },
+          "tier": {
+            "type": "string",
+            "enum": ["S", "M", "L", "XL"]
+          },
+          "write_paths": {
+            "type": "array",
+            "items": { "type": "string" }
+          }
+        }
+      }
+    },
+    "signals": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "axes": {
+      "type": "object",
+      "description": "Classifier axis scores (type, breadth, ambiguity, risk, verifiability, horizon)",
+      "additionalProperties": { "type": "string" }
+    },
+    "project": {
+      "type": "object",
+      "description": "Project profile from scripts/project-scan.py (size, loc, packages, tests, memory file)"
+    },
+    "decision": {
+      "type": "string",
+      "enum": ["inline", "ask", "auto"],
+      "description": "inline = one line and continue; ask = show the card and wait; auto = user chose always accept"
+    },
+    "decision_reason": { "type": "string" },
+    "session_tier": {
+      "type": "string",
+      "enum": ["S", "M", "L", "XL"],
+      "description": "Tier of the model the session is on now"
+    },
+    "calibration": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["from", "to", "reason"],
+      "description": "Tier moved by the project's recorded outcomes",
+      "properties": {
+        "from": { "type": "string", "enum": ["S", "M", "L", "XL"] },
+        "to": { "type": "string", "enum": ["S", "M", "L", "XL"] },
+        "reason": { "type": "string" }
+      }
+    },
+    "mode_reason": {
+      "type": "string",
+      "description": "Why the mode was lowered (e.g. a worker would not pay off)"
+    },
+    "preferences": {
+      "type": "object",
+      "description": "Project preferences from .model-orchestrate.prefs.json"
+    },
+    "alerts": {
+      "type": "array",
+      "description": "Project growth / structure alerts to show the user",
+      "items": { "type": "string" }
+    }
+  }
+}

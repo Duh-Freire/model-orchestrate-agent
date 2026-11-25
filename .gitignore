@@ -1,0 +1,7 @@
+*.skill
+__pycache__/
+*.pyc
+.model-orchestrate.json
+.model-orchestrate.prefs.json
+.DS_Store
+Thumbs.db
