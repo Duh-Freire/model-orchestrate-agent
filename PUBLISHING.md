@@ -13,7 +13,7 @@ Maintainer notes: what was published and how to release the next version.
 | Date | Version | Notes |
 | --- | --- | --- |
 | 2026-11-25 | v0.7.0 | First public release. The repo was created as `claude-model-orchestrate-agent` and renamed to the skill's own name on the same day (GitHub redirects the old URL). Listed on skills.sh after the first `npx skills add` install. |
-| 2026-11-26 | v0.7.1 | Short pitch (what it does, the cannon/crane analogy and one example) at the top of `SKILL.md`, so it shows first on the skills.sh page. About 90 more tokens per run. |
+| 2026-11-25 | v0.7.1 | Short pitch (what it does, the cannon/crane analogy and one example) at the top of `SKILL.md`, so it shows first on the skills.sh page. About 90 more tokens per run. |
 
 ## How the first release was prepared
 
