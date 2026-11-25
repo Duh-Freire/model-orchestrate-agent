@@ -4,6 +4,7 @@
 
 `model-orchestrate-agent` is an [Agent Skill](https://docs.claude.com/en/docs/claude-code/skills) for Claude Code (and other AI coding agents) that classifies every new coding task, recommends a model tier and reasoning effort, and — once you approve — applies the choice automatically by spawning a subagent or a new session on the right model. It saves tokens on easy work and escalates to frontier models only when the task really needs it.
 
+[![skills.sh](https://skills.sh/b/duphl-wq/model-orchestrate-agent)](https://skills.sh/duphl-wq/model-orchestrate-agent)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE.txt)
 ![Claude Code](https://img.shields.io/badge/Claude_Code-skill-D97757)
 ![Python](https://img.shields.io/badge/python-3.8%2B-blue)
@@ -37,7 +38,15 @@ Bias the choice per project with `optimize_for`: `cost`, `balanced` (default) or
 
 ## Installation
 
-### Claude Code
+### Quick install (any agent, via [skills.sh](https://skills.sh))
+
+```bash
+npx skills add duphl-wq/model-orchestrate-agent
+```
+
+The [skills CLI](https://github.com/vercel-labs/skills) detects your agents (Claude Code, Codex, Cursor, Copilot, OpenCode, ...) and installs the skill where each one expects it.
+
+### Claude Code (manual)
 
 Personal (available in every project):
 
