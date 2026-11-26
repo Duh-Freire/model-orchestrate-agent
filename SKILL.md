@@ -12,8 +12,8 @@ description: >-
   esforço, economizar tokens or delegar para subagentes.
 license: MIT
 metadata:
-  author: duphl-wq
-  version: "0.7.1"
+  author: Duh-Freire
+  version: "0.7.2"
   tags: routing orchestration model effort cost tokens subagents
 ---
 

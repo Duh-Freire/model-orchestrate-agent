@@ -4,9 +4,9 @@ Maintainer notes: what was published and how to release the next version.
 
 ## Links
 
-- Repository: https://github.com/duphl-wq/model-orchestrate-agent
-- skills.sh: https://skills.sh/duphl-wq/model-orchestrate-agent
-- Releases: https://github.com/duphl-wq/model-orchestrate-agent/releases
+- Repository: https://github.com/Duh-Freire/model-orchestrate-agent
+- skills.sh: https://skills.sh/Duh-Freire/model-orchestrate-agent
+- Releases: https://github.com/Duh-Freire/model-orchestrate-agent/releases
 
 ## Releases
 
@@ -14,6 +14,7 @@ Maintainer notes: what was published and how to release the next version.
 | --- | --- | --- |
 | 2026-11-25 | v0.7.0 | First public release. The repo was created as `claude-model-orchestrate-agent` and renamed to the skill's own name on the same day (GitHub redirects the old URL). Listed on skills.sh after the first `npx skills add` install. |
 | 2026-11-25 | v0.7.1 | Short pitch (what it does, the cannon/crane analogy and one example) at the top of `SKILL.md`, so it shows first on the skills.sh page. About 90 more tokens per run. |
+| 2026-11-26 | v0.7.2 | GitHub username renamed from `duphl-wq` to `Duh-Freire`: author, license, README links and badge updated. GitHub redirects the old URLs. No behavior change. |
 
 ## How the first release was prepared
 
